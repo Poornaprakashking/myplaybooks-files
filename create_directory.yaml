@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+  - name: ansible create directory example
+    file:
+      path: /home/ansadmin/dir1
+      state: directory

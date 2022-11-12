@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: install git and tree packages
+      yum:
+        name: '{{ item }}'
+        state: present
+      loop:
+        - tree
+        - git
+        - java
+        - docker
+
